@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Kviz</title>
+ <script type="module"
+ src="https://cdn.jsdelivr.net/npm/@ionic/core@8.4.1/dist/ionic/ionic.esm.js"></script>
+ <link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/@ionic/core@8.4.1/css/ionic.bundle.css">
+</head>
+<body>
+ <ion-app>
+    <ion-header>
+         <ion-toolbar color="primary">
+            <ion-badge slot="end" color="warning" id="bodovi">Bodovi: 0</ion-badge>
+            <ion-progress-bar id="napredak" value="0"></ion-progress-bar>
+            <ion-title>Kviz</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+        <ion-card id="kartica-pitanje">
+            <ion-card-header>
+                <ion-card-subtitle id="redni-broj">Pitanje 1 / 5</ion-card-subtitle>
+                <ion-card-title id="tekst-pitanja">Koji je glavni grad Hrvatske?</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-radio-group id="odgovori">
+                    <ion-item>
+                        <ion-radio value="0" justify="start" label-placement="end" id="odgovor0">Split</ion-radio>
+                    </ion-item>
+                    <ion-item>
+                        <ion-radio value="1" justify="start" label-placement="end" id="odgovor1">Zagreb</ion-radio>
+                    </ion-item>
+                    <ion-item>
+                        <ion-radio value="2" justify="start" label-placement="end" id="odgovor2">Osijek</ion-radio>
+                    </ion-item>
+                    <ion-item>
+                        <ion-radio value="3" justify="start" label-placement="end" id="odgovor3">Rijeka</ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+                <ion-button expand="block" id="gumb-dalje">Dalje</ion-button>
+            </ion-card-content>
+        </ion-card>
+
+        <ion-card id = "kartica-rezultat" style = "display:none;">
+            <ion-card-header>
+                <ion-card-title>Kraj kviza!</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <h1 id="tekst-rezultata">0 / 5</h1>
+                <p id="poruka">Poruka</p>
+                <ion-button expand = "block" color = "success" id = "gumb-ponovno">Igraj ponovno</ion-button>
+            </ion-card-content>
+        </ion-card>
+
+    </ion-content>
+
+ </ion-app>
+</body>
+</html>
